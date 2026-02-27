@@ -1,6 +1,6 @@
 # Part 1 – Setup & Exploring Copilot Chat
 
-> **Navigation:** Part 1 | [Part 2 – Custom Skills](part2-custom-skills.md) | [Part 3 – Custom Agents](part3-custom-agents.md) | [Part 4 – Issues & Review](part4-issues-and-review.md)
+> **Navigation:** Part 1 | [Part 2 – Custom Skills](part2-custom-skills.md) | [Part 3 – Custom Agents](part3-custom-agents.md) | [Part 4 – Issues, Coding Agent & Review](part4-issues-and-review.md)
 
 ---
 
@@ -33,7 +33,7 @@
 - [ ] Ensure you also have **Copilot Chat** available (and optionally **Copilot Edits/Agent** features if supported by your IDE).
 
 **Documentation:**
-- [Getting started with GitHub Copilot](https://docs.github.com/en/copilot/getting-started-with-github-copilot)
+- [Getting started with GitHub Copilot](https://docs.github.com/en/copilot/get-started/quickstart)
 - [Setting up GitHub Copilot in VS Code](https://code.visualstudio.com/docs/copilot/setup)
 
 > You don't need three separate installs — Copilot Chat and Edits are included in most IDE integrations.
@@ -63,47 +63,42 @@ Try *Ask*, *Explain*, *Generate*, and *Edit* modes to see how each behaves.
 
 - [ ] Switch between models (e.g. `GPT-5 mini`, `Claude Sonnet 4.6`, `Gemini 3 Flash`) and compare reasoning quality.
 
-[Use Copilot Chat to understand code](https://docs.github.com/en/copilot/github-copilot-chat/understanding-your-code-with-github-copilot-chat)
+[Use Copilot Chat to understand code](https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-ide)
 </details>
 
 ---
 
 <details>
-<summary><b>4. Generate a <code>copilot_instructions.md</code> file</b></summary>
+<summary><b>4. Generate a <code>copilot-instructions.md</code> file</b></summary>
 
-Copilot can generate **project setup and context notes** automatically — this file helps Copilot understand your project and coding style better.
+Copilot can analyse your codebase and generate a **project instructions file** automatically. This file tells Copilot how your project is structured, how to build and run it, and what conventions to follow — so every future chat response is more accurate and consistent.
 
 ### Why we're doing this
-The `copilot_instructions.md` file acts as a **knowledge source** for Copilot.
+The `.github/copilot-instructions.md` file acts as a **persistent project briefing** for Copilot.
 It summarizes:
-- How the project is structured
-- How to build and run it
-- Key dependencies, conventions, and folders
+- How the project is structured and what it does
+- How to build, test, and run it
+- Key dependencies, conventions, and architecture decisions
 
-When this file exists, Copilot can use it to **reason more effectively** about your codebase — for example, it can:
-- Give more accurate answers when you ask questions about the project.
-- Provide better suggestions for refactoring, debugging, and tests.
-- Maintain consistent terminology and architecture decisions in its output.
-
-Think of it as giving Copilot a "project briefing document".
+When this file exists, Copilot automatically includes it as context in every request — you don't need to repeat yourself each session.
 
 ### Steps
 > Make sure you're on your `copilot-hackathon` branch before generating the file.
 
-- [ ] Open the **Command Palette** (`Ctrl/Cmd + Shift + P`)
-- [ ] Search for **"Copilot: Generate Project Instructions"**
-- [ ] Follow the prompts — Copilot will create `.github/copilot-instructions.md`
+- [ ] Open **Copilot Chat** in VS Code (Agent mode)
+- [ ] Type `/init` and press Enter
+- [ ] Copilot will analyse your workspace and create `.github/copilot-instructions.md`
 
 Once it's created, open the file and read what Copilot generated.
-You can edit and expand this file — Copilot will use any updates in future conversations.
+You can edit and expand it freely — any updates will be picked up automatically in future conversations.
 
 ### Verify the file is loaded as context
-- [ ] Open a **new Copilot Chat** session and ask any question about your project, e.g. "What is this project?"
-- [ ] Once Copilot responds, **expand the references list** at the top of the reply (the "Used X references" or similar disclosure)
-- [ ] Confirm that `.github/copilot-instructions.md` is listed there — this confirms the file is automatically included as context for every response going forward.
+- [ ] Open a **new Copilot Chat** session and ask a question about your project, e.g. "What is this project?"
+- [ ] Once Copilot responds, **expand the references list** at the top of the reply
+- [ ] Confirm that `.github/copilot-instructions.md` is listed — this means it's automatically included as context for every response going forward.
 
 **Documentation:**
-[Generate project instructions with Copilot](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions)
+[Customize AI in VS Code – Set up your project for AI](https://code.visualstudio.com/docs/copilot/customization/overview#_set-up-your-project-for-ai)
 </details>
 
 ---

@@ -98,12 +98,60 @@ Key things to notice:
 
 ---
 
+### BONUS: Build your own agent
+
+<details>
+<summary><b>BONUS. Design your own agent</b></summary>
+
+> Make sure you're on your `copilot-hackathon` branch before creating this file.
+
+Now that you've seen how both agents work, create your own agent tailored to your team's needs.
+
+Ideas to get started:
+- A **security reviewer** that scans for common vulnerabilities (`read` + `search` only)
+- A **migration assistant** that helps port code to a new library or framework
+- A **test generator** that focuses exclusively on writing tests for untested code
+- A **release notes writer** that drafts changelogs from commits and PRs
+
+#### Steps
+
+- [ ] Create `.github/agents/<your-agent-name>.md` with a basic YAML frontmatter block (`name`, `description`, `tools`) and a one-paragraph summary of what you want the agent to do — you don't need to write polished instructions yourself.
+
+- [ ] Open **Copilot Chat** (Agent mode) and ask Copilot to expand your summary into full agent instructions. For example:
+  > "I've created `.github/agents/security-reviewer.md` with a short description. Please write detailed instructions for this agent following best practices for GitHub Copilot custom agents."
+
+  Copilot will generate the full prompt body for you — review and tweak as needed.
+
+- [ ] *(Optional)* The community [`finalize-agent-prompt`](https://github.com/github/awesome-copilot/tree/main/skills/finalize-agent-prompt) skill from `github/awesome-copilot` is purpose-built for exactly this. Copy it into your `.github/skills/` folder and then ask Copilot to use it to polish your agent file — it will check structure, wording, and clarity against proven patterns.
+
+- [ ] Test your agent in Copilot Chat by selecting it from the agent dropdown.
+- [ ] Consider: would a skill complement this agent? Create a matching skill if so.
+
+</details>
+
+---
+
 ### Key Takeaways
 
 - Agents give you **persona-based control** — you define what the agent can do, what tools it has, and how it behaves.
 - The `tools` property is powerful — restricting tools shapes the agent's capabilities (e.g., a reviewer that can read but not edit).
 - Agents can be shared across an organization or enterprise by placing them in a `.github-private` repository (see [docs](https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-custom-agents#where-you-can-configure-custom-agents)).
 - Combine agents with skills for maximum effect: agents define *who* is helping, skills define *what* they know.
+
+---
+
+### Documentation & Resources
+
+**Getting started:**
+- [About custom agents](https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-custom-agents) — overview of agents, file format, and where to place them
+- [Custom agents in VS Code](https://code.visualstudio.com/docs/copilot/customization/custom-agents) — how to create and invoke custom agents in VS Code
+
+**Technical reference:**
+- [Creating custom agents](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/create-custom-agents) — full YAML frontmatter reference and tool options
+- [About agent skills](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills) — how skills and agents interact
+
+**Community & examples:**
+- [awesome-copilot](https://github.com/github/awesome-copilot) — curated collection of community agents, skills, and extensions
 
 ---
 

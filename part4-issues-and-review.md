@@ -69,7 +69,7 @@ These editors also support MCP servers via the Copilot Chat MCP icon. Look for t
 
 **Documentation:**
 - [MCP servers in VS Code](https://code.visualstudio.com/docs/copilot/customization/mcp-servers) — full reference for VS Code MCP setup
-- [Extending Copilot Chat with MCP](https://docs.github.com/en/copilot/customizing-copilot/extending-copilot-chat-with-mcp) — setup for all supported IDEs
+- [Extending Copilot Chat with MCP](https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp/extend-copilot-chat-with-mcp) — setup for all supported IDEs
 
 </details>
 
@@ -92,6 +92,10 @@ Now that the GitHub MCP server is configured:
   - "How could we improve code related to this issue?"
 
 [Using GitHub Copilot in Issues](https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-ide)
+
+> **Copilot not finding your issues?** Click the **tools icon** (the wrench/hammer icon in the chat input bar) to open the tool selection dialog. Verify that the `github` server is listed, shows as **started**, and that its tools are checked. If the server is stopped, click it to start it. If tools are unchecked, enable them and retry your prompt.
+> 
+> For further troubleshooting, see [MCP servers in VS Code – troubleshooting](https://code.visualstudio.com/docs/copilot/customization/mcp-servers#_troubleshoot-and-debug-mcp-servers).
 </details>
 
 ---
@@ -189,7 +193,7 @@ Copilot will analyze the diff and comment directly on the PR.
 - [ ] 8 — Build a documentation agent
 - [ ] BONUS — Create your own agent
 - [ ] 9 — Add the GitHub MCP server
-- [ ] 10–12 — Work with issues & Coding Agent
+- [ ] 10–12 — Explore, analyze and generate issues
 - [ ] 13 — Assign issues to Copilot Coding Agent
 - [ ] 14 — Assign PR to Copilot for review
 - [ ] Share insights

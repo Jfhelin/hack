@@ -1,6 +1,6 @@
 # Part 2 – Custom Copilot Skills
 
-> **Navigation:** [Part 1 – Setup & Chat](part1-setup-and-chat.md) | Part 2 | [Part 3 – Custom Agents](part3-custom-agents.md) | [Part 4 – Issues & Review](part4-issues-and-review.md)
+> **Navigation:** [Part 1 – Setup & Chat](part1-setup-and-chat.md) | Part 2 | [Part 3 – Custom Agents](part3-custom-agents.md) | [Part 4 – Issues, Coding Agent & Review](part4-issues-and-review.md)
 
 ---
 
@@ -154,11 +154,11 @@ Both approaches are valid — choose based on whether you want **control** or **
 
 The ASCII art exercises above are intentionally simple — but skills really shine when they encode **team-specific knowledge** that Copilot wouldn't otherwise have. The community `github/awesome-copilot` repository contains hundreds of real skills, and they follow consistent patterns. Consider skills that:
 
-- **Generate conventional commit messages** — a skill like `conventional-commit` that guides Copilot to produce standardized commit messages following the Conventional Commits specification, with type, scope, and description, every time.
-- **Plan and validate deployments** — skills like `devops-rollout-plan` or `azure-deployment-preflight` encode your rollout process: preflight checks, step-by-step deployment, verification signals, and rollback procedures.
-- **Automate and document GitHub Actions workflows** — a skill like `create-github-action-workflow-specification` captures your CI/CD pipeline structure so Copilot can generate, document, or troubleshoot workflows consistently.
-- **Generate tests across languages** — skills like `polyglot-test-agent` teach Copilot to generate comprehensive unit tests for any language in your stack, following your project's testing conventions.
-- **Document and onboard** — skills like `architecture-blueprint-generator` or `folder-structure-blueprint-generator` produce standardized architectural documentation from your codebase, giving new developers (and Copilot) a fast path to understanding how the project is structured.
+- **Generate conventional commit messages** — a skill like [`conventional-commit`](https://github.com/github/awesome-copilot/tree/main/skills/conventional-commit) that guides Copilot to produce standardized commit messages following the Conventional Commits specification, with type, scope, and description, every time.
+- **Plan and validate deployments** — skills like [`devops-rollout-plan`](https://github.com/github/awesome-copilot/tree/main/skills/devops-rollout-plan) or [`azure-deployment-preflight`](https://github.com/github/awesome-copilot/tree/main/skills/azure-deployment-preflight) encode your rollout process: preflight checks, step-by-step deployment, verification signals, and rollback procedures.
+- **Automate and document GitHub Actions workflows** — a skill like [`create-github-action-workflow-specification`](https://github.com/github/awesome-copilot/tree/main/skills/create-github-action-workflow-specification) captures your CI/CD pipeline structure so Copilot can generate, document, or troubleshoot workflows consistently.
+- **Generate tests across languages** — skills like [`polyglot-test-agent`](https://github.com/github/awesome-copilot/tree/main/skills/polyglot-test-agent) teach Copilot to generate comprehensive unit tests for any language in your stack, following your project's testing conventions.
+- **Document and onboard** — skills like [`architecture-blueprint-generator`](https://github.com/github/awesome-copilot/tree/main/skills/architecture-blueprint-generator) or [`folder-structure-blueprint-generator`](https://github.com/github/awesome-copilot/tree/main/skills/folder-structure-blueprint-generator) produce standardized architectural documentation from your codebase, giving new developers (and Copilot) a fast path to understanding how the project is structured.
 
 Skills turn Copilot from a general-purpose assistant into one that understands **your** team's way of working. They're version-controlled alongside your code, reviewed in PRs, and shared automatically with everyone on the project.
 
