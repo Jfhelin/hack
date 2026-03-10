@@ -16,10 +16,10 @@
   - Use an existing project you maintain.
   - Fork a public repo (e.g. from [GitHub Explore](https://github.com/explore)).
 
-- [ ] Copy the markdown of the relevant part files into issues in your working repo so that you can modify them.
-
 - [ ] Create a **new branch**, e.g. `copilot-hackathon`.
   Keep all experiments in this branch — do **not** modify your `main`.
+
+- [ ] Copy the markdown of the relevant part files into issues in your working repo so that you can modify them.
 
 > Copilot never commits code without your consent, but keep your hackathon work isolated.
 </details>
