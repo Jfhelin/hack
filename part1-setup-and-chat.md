@@ -19,7 +19,7 @@
 - [ ] Create a **new branch**, e.g. `copilot-hackathon`.
   Keep all experiments in this branch — do **not** modify your `main`.
 
-- [ ] Copy the markdown of the relevant part files into issues in your working repo so that you can modify them.
+- [ ] Copy the markdown of the relevant part files into issues in your new branch so that you can modify them.
 
 > Copilot never commits code without your consent, but keep your hackathon work isolated.
 </details>
